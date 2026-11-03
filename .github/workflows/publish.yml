@@ -17,6 +17,8 @@ permissions: {}
 
 jobs:
   pond:
+    # Skipped in the template repository itself, which is not a pond. Ponds made from it run normally.
+    if: github.repository != 'FrogPak/pond-template'
     uses: FrogPak/engine/.github/workflows/pond.yml@v1
     permissions:
       contents: write
