@@ -1,0 +1,13 @@
+# Pond configuration. Every setting is described in
+# https://github.com/FrogPak/engine/blob/main/docs/configuration.md
+
+pond:
+  title: My Pond                 # shown on the landing page and in software centers
+  subtitle: Apps by me           # optional
+  remote: mypond                 # the name people type: flatpak install mypond <app ID>
+
+apps:
+  # One entry per app: its app ID, then the repository whose releases hold
+  # its .flatpak files.
+  # org.example.MyApp:
+  #   repo: example/myapp

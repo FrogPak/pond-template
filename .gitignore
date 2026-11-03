@@ -1,0 +1,3 @@
+# Signing key material. Never commit.
+*.asc
+*.gpg

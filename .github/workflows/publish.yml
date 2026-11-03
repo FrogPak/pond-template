@@ -1,0 +1,29 @@
+name: Publish
+
+on:
+  # Hourly check for new app releases; a rebuild runs only when something changed.
+  schedule:
+    - cron: '41 * * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Rebuild even if nothing changed
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+
+permissions: {}
+
+jobs:
+  pond:
+    uses: FrogPak/engine/.github/workflows/pond.yml@v1
+    permissions:
+      contents: write
+      actions: write
+      pages: write
+      id-token: write
+    with:
+      force: ${{ inputs.force == true }}
+    secrets:
+      GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
