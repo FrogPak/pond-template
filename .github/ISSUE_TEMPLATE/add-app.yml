@@ -1,0 +1,98 @@
+# Lets people ask for an app to be added to this Pond. Delete this file if the
+# Pond only publishes your own apps.
+name: Add an app
+description: Ask for an app to be published in this Pond.
+title: "Add app: "
+labels: ["app request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This Pond publishes apps from their own releases. It does not build apps itself, so the app needs releases with a `.flatpak` bundle for each architecture this Pond publishes.
+
+        Not sure the app has those yet? See [Feeding a Pond](https://github.com/FrogPak/engine/blob/main/docs/apps.md) for how developers can provide them.
+
+  - type: input
+    id: app-id
+    attributes:
+      label: App ID
+      description: The Flatpak app ID, as in the bundle and its metainfo.
+      placeholder: org.example.Notes
+    validations:
+      required: true
+
+  - type: input
+    id: repo
+    attributes:
+      label: Repository
+      description: Where the releases are. `owner/repo` for GitHub, or the full `https://` address on Codeberg, Forgejo or Gitea. Only public repositories work.
+      placeholder: owner/repo
+    validations:
+      required: true
+
+  - type: dropdown
+    id: forge
+    attributes:
+      label: Forge
+      description: Leave this on "Detect automatically" unless the app is on a self-hosted Forgejo or Gitea.
+      options:
+        - Detect automatically (GitHub, Codeberg)
+        - Self-hosted Forgejo
+        - Self-hosted Gitea
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: assets
+    attributes:
+      label: Release file names
+      description: |
+        Leave empty if the bundles are named `APP_ID-ARCH.flatpak`, such as `org.example.Notes-x86_64.flatpak`. Otherwise give a file name or a pattern using `{arch}`, `{app_id}`, `{name}` or `*`.
+      placeholder: "notes-*-{arch}.flatpak"
+
+  - type: input
+    id: example-release
+    attributes:
+      label: Example release
+      description: A link to a recent release with the bundles, so the file names can be checked.
+      placeholder: https://github.com/owner/repo/releases/tag/v1.0.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: relationship
+    attributes:
+      label: Your connection to the app
+      options:
+        - I develop or maintain it
+        - I use it and am suggesting it
+    validations:
+      required: true
+
+  - type: input
+    id: license
+    attributes:
+      label: License
+      description: The app's license, as an SPDX identifier if you know it.
+      placeholder: GPL-3.0-or-later
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: The app has a published (not pre-release) release with `.flatpak` bundles.
+          required: true
+        - label: The license allows this Pond to redistribute the app.
+          required: true
+        - label: The bundles were built with `--runtime-repo=https://dl.flathub.org/repo/flathub.flatpakrepo`, so their runtime installs from Flathub. (Leave unchecked if you are not sure.)
+        - label: The app ships AppStream metainfo with a name, summary and release version. (Leave unchecked if you are not sure.)
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Optional. Why the app belongs in this Pond, or anything its maintainers should know.
