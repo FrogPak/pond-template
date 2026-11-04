@@ -14,4 +14,8 @@ The landing page lists every app with its install command: **https://OWNER.githu
 4. Edit `frogpak.yml`: set the title and remote name, and list your apps.
 5. **Actions > Publish > Run workflow.**
 
+People can ask for apps to be added or removed with the **Add an app** and **Remove an app** issue forms in `.github/ISSUE_TEMPLATE/`. Delete them if the Pond only publishes your own apps.
+
+`SECURITY.md` asks people to report malicious apps privately. Turn that on in **Settings > Security > Private vulnerability reporting**.
+
 The full guide is [docs/setup.md](https://github.com/FrogPak/engine/blob/main/docs/setup.md) in the engine repository.
