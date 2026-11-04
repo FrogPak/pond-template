@@ -1,12 +1,12 @@
 # My Pond
 
-<!-- Replace this README with your own once the pond is running. -->
+<!-- Replace this README with your own once the Pond is running. -->
 
 A signed Flatpak remote, built with [FrogPak](https://github.com/FrogPak/engine) and hosted on GitHub Pages.
 
 The landing page lists every app with its install command: **https://OWNER.github.io/REPOSITORY/**
 
-## Setting up this pond
+## Setting up this Pond
 
 1. Make the repository public (GitHub Pages is free only for public repositories).
 2. **Settings > Pages > Source:** GitHub Actions.
