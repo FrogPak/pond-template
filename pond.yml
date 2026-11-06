@@ -14,6 +14,7 @@ pond:
   #favicon: assets/icon.svg      # square image for the browser tab and the remote's icon
   #css: assets/custom.css        # your own stylesheet, loaded after FrogPak's
   #social-image: assets/social.png  # image for shared links (default: the repo's social preview image)
+  #order: listed                 # app order: listed (default), name, newest or app-id
   #theme:                        # colors as hex, without the #
   #  accent: 1966c2
   #  accent-dark: 78aeed
