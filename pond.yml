@@ -15,11 +15,16 @@ pond:
   #css: assets/custom.css        # your own stylesheet, loaded after FrogPak's
   #social-image: assets/social.png  # image for shared links (default: the repo's social preview image)
   #order: listed                 # app order: listed (default), name, newest or app-id
-  #theme:                        # colors as hex, without the #
-  #  accent: 1966c2
+  #theme:
+  #  mode: system                # how the page starts: system (default), light or dark
+  #  accent: 1966c2              # colors as hex, without the #
   #  accent-dark: 78aeed
   #  background: f6f5f4
   #  background-dark: 1d1d1d
+
+# Optional: more files of apps, each holding an apps: section like the one below.
+#include:
+#  - apps/alex.yml
 
 apps:
   # One entry per app: its app ID, then the repository whose releases hold
