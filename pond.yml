@@ -9,9 +9,10 @@ pond:
   #arches:                       # architectures to publish (default: x86_64 and aarch64)
   #  - x86_64                    # 64-bit PCs
   #  - aarch64                   # 64-bit ARM: phones, Raspberry Pi, ARM laptops
-  #logo: assets/logo.svg         # landing page logo; logo.svg or logo.png at the root is used without this
-  #logo-dark: assets/logo-dark.svg  # logo for visitors in dark mode
-  #favicon: assets/icon.svg      # square image for the browser tab and the remote's icon
+  #logo-square: assets/logo-square.svg  # recommended: square logo for the browser tab, the remote's icon and badges
+  #logo-square-dark: assets/logo-square-dark.svg  # its version for dark mode
+  #logo-wide: assets/logo-wide.svg  # a logo with the Pond's name in it; replaces the title on the landing page
+  #logo-wide-dark: assets/logo-wide-dark.svg  # its version for dark mode
   #css: assets/custom.css        # your own stylesheet, loaded after FrogPak's
   #social-image: assets/social.png  # image for shared links (default: the repo's social preview image)
   #order: listed                 # app order: listed (default), name, newest or app-id

@@ -6,6 +6,8 @@ A signed Flatpak remote, built with [FrogPak](https://github.com/FrogPak/engine)
 
 The landing page lists every app with its install command: **https://OWNER.github.io/REPOSITORY/**
 
+App developers: [badges for your README](https://OWNER.github.io/REPOSITORY/badges/) help people find your app here.
+
 ## Setting up this Pond
 
 1. Make the repository public (GitHub Pages is free only for public repositories).
